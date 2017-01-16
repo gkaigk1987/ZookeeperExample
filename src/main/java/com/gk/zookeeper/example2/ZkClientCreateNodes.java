@@ -18,7 +18,7 @@ public class ZkClientCreateNodes {
 		String node = "/gk/gk-1";
 //		zkClient.createPersistent(node);//存在子节点时，此种创建方法会出异常
 		
-		//ZkClient可以递归的先创建父节点，再创建子节点。元素javaapi不可以
+		//ZkClient可以递归的先创建父节点，再创建子节点。原生javaapi不可以
 		zkClient.createPersistent(node,true);//第二个参数设为true表示需要创建父节点
 		System.out.println("success create znodes.");
 	}
