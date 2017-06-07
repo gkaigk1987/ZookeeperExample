@@ -19,8 +19,8 @@ public class ZkClientDeleteNodes {
 		String childNode = "/gk/gk-1";
 		zkClient.createPersistent(parentNode, "gk");
 		zkClient.createPersistent(childNode, "qq");
-		System.out.println(zkClient.readData(parentNode));//读取节点数据
-		System.out.println(zkClient.readData(childNode));
+		System.out.println(zkClient.readData(parentNode).toString());//读取节点数据
+		System.out.println(zkClient.readData(childNode).toString());
 		zkClient.deleteRecursive(parentNode);//递归删除节点
 		System.out.println("success delete znode.");
 	}

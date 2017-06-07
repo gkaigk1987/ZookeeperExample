@@ -30,7 +30,7 @@ public class ZkClientGetChildrenNodesData {
 			}
 		});
 		
-		System.out.println(zkClient.readData(node));
+		System.out.println(zkClient.readData(node).toString());
 		zkClient.writeData(node, "qq");
 		Thread.sleep(1000);
         zkClient.delete(node);
